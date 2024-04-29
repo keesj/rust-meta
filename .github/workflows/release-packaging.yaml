@@ -18,6 +18,8 @@ jobs:
           - stable
     steps:
       - uses: actions/checkout@v3
+        with: 
+          submodules: true
       - run: cargo build -r
       - run: cargo test -r
       - name: Create Release
